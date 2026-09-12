@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Arsalain Gharsallaoui's Blog — Articles on Linux, web development, cybersecurity, and open-source resources for CS students." />
+  <meta name="keywords" content="blog, Linux, web development, cybersecurity, open source, Tunisia, CS student, Arsalain Gharsallaoui" />
+  <meta name="author" content="Arsalain Gharsallaoui" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Blog & Resources — Arsalain Gharsallaoui" />
+  <meta property="og:description" content="Articles on Linux, web dev, cybersecurity, and resources for Arab IT students." />
+  <meta property="og:url" content="https://arsalaing.github.io/blog.html" />
+  <meta property="og:site_name" content="Arsalain.dev" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Blog & Resources — Arsalain Gharsallaoui" />
+  <meta name="twitter:description" content="Linux, web dev, security articles by a Tunisian CS student." />
+
+  <title>Blog & Resources — Arsalain Gharsallaoui</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Blog-page only extras */
+    .blog-hero-decoration {
+      position: absolute;
+      pointer-events: none;
+      opacity: 0.15;
+      font-family: var(--font-head);
+      font-size: clamp(5rem, 15vw, 11rem);
+      font-weight: 900;
+      color: var(--neon-cyan);
+      letter-spacing: -0.05em;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+      user-select: none;
+      z-index: 0;
+    }
+
+    .blog-page-header { position: relative; overflow: hidden; }
+    .blog-page-header > *:not(.blog-hero-decoration) { position: relative; z-index: 1; }
+
+    .no-results {
+      text-align: center;
+      padding: 3rem 1.5rem;
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      display: none;
+    }
+
+    .no-results.show { display: block; }
+
+    @keyframes blink {
+      0%,100% { opacity: 1; }
+      50%      { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================
+     BACKGROUND LAYERS
+     ============================================================ -->
+<div class="bg-layer" aria-hidden="true"></div>
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="particles" aria-hidden="true"></div>
+<div class="cursor-glow" aria-hidden="true"></div>
+
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<header class="navbar" role="banner">
+  <div class="navbar-inner">
+    <a href="index.html" class="nav-logo" aria-label="Go to portfolio home">
+      &lt;<span>AG</span>/&gt;
+    </a>
+
+    <nav aria-label="Blog navigation">
+      <ul class="nav-links" role="list">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#education">Education</a></li>
+        <li><a href="index.html#certifications">Certifications</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="blog.html" aria-current="page" style="color:var(--neon-cyan);border-color:var(--neon-cyan);background:rgba(0,245,255,0.06);">Blog</a></li>
+        <li><a href="index.html#about">About</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-right">
+      <button class="theme-toggle" aria-label="Toggle theme" title="Toggle light/dark mode">
+        <span class="icon" aria-hidden="true">☀</span>
+        <span class="label">LIGHT</span>
+      </button>
+      <button class="burger" id="burger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<nav id="mobile-menu" class="mobile-menu" aria-label="Mobile blog navigation" aria-hidden="true">
+  <a href="index.html#home">Home</a>
+  <a href="index.html#education">Education</a>
+  <a href="index.html#certifications">Certifications</a>
+  <a href="index.html#projects">Projects</a>
+  <a href="blog.html">Blog</a>
+  <a href="index.html#about">About</a>
+</nav>
+
+<!-- ============================================================
+     PAGE WRAPPER
+     ============================================================ -->
+<div class="page-wrapper">
+
+  <!-- ============================================================
+       BLOG HEADER
+       ============================================================ -->
+  <header class="blog-page-header" aria-label="Blog page header">
+    <div class="blog-hero-decoration" aria-hidden="true">BLOG</div>
+
+    <a href="index.html" class="blog-back-link" aria-label="Back to portfolio">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Back to Portfolio
+    </a>
+
+    <div class="section-label" style="justify-content:center;" aria-hidden="true">// Blog & Resources</div>
+
+    <h1 class="blog-page-title">
+      Digital <span>Dispatch</span>
+    </h1>
+    <p class="blog-page-subtitle">
+      Thoughts on Linux, web development, cybersecurity, and building open-source resources
+      for Arab IT students. Written by a student, for students.
+    </p>
+
+    <!-- Stats row -->
+    <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:1.75rem;margin-bottom:2rem;">
+      <div class="chip chip-cyan">6 Posts</div>
+      <div class="chip chip-magenta">4 Topics</div>
+      <div class="chip chip-green">Free to Read</div>
+      <div class="chip chip-purple">By Arsalain</div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       FILTER BAR
+       ============================================================ -->
+  <div style="max-width:1280px;margin:0 auto;padding:0 1.5rem;">
+    <nav class="blog-filters" aria-label="Filter posts by topic" role="navigation">
+      <button class="filter-btn active" data-filter="all" aria-pressed="true">All Posts</button>
+      <button class="filter-btn" data-filter="linux" aria-pressed="false">🐧 Linux</button>
+      <button class="filter-btn" data-filter="security" aria-pressed="false">🔐 Security</button>
+      <button class="filter-btn" data-filter="webdev" aria-pressed="false">🌐 Web Dev</button>
+      <button class="filter-btn" data-filter="resources" aria-pressed="false">📚 Resources</button>
+    </nav>
+  </div>
+
+  <!-- ============================================================
+       BLOG POSTS GRID
+       ============================================================ -->
+  <main>
+    <div class="blog-posts-grid" role="list" aria-label="All blog posts" id="posts-grid">
+
+      <!-- Post 1 -->
+      <article class="glass-card blog-post-card" role="listitem" data-tags="linux">
+        <div class="post-tag"><span class="chip chip-green">🐧 Linux</span></div>
+        <time class="post-date" datetime="2024-11-15">November 15, 2024</time>
+        <h2 class="post-title">Getting Started with Linux: A Student's Survival Guide</h2>
+        <p class="post-excerpt">
+          Everything I wish I knew before switching to Linux as a CS student. From the terminal to package managers,
+          choosing a distro, and setting up your dev environment — let's make it painless and actually enjoyable.
+        </p>
+        <div class="post-footer">
+          <span class="read-time">⏱ 8 min read</span>
+          <a href="#" class="read-more" aria-label="Read Linux Survival Guide (coming soon)">
+            Read Post
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Post 2 -->
+      <article class="glass-card blog-post-card" role="listitem" data-tags="security">
+        <div class="post-tag"><span class="chip chip-magenta">🔐 Security</span></div>
+        <time class="post-date" datetime="2024-10-28">October 28, 2024</time>
+        <h2 class="post-title">XSS Attacks Explained: Why Your Web App Is Probably Vulnerable</h2>
+        <p class="post-excerpt">
+          Cross-site scripting is one of the most common — and most misunderstood — web vulnerabilities.
+          Here's how attackers exploit it, how to detect it in your code, and how to fix it with real examples.
+        </p>
+        <div class="post-footer">
+          <span class="read-time">⏱ 10 min read</span>
+          <a href="#" class="read-more" aria-label="Read XSS Attacks post (coming soon)">
+            Read Post
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Post 3 -->
+      <article class="glass-card blog-post-card" role="listitem" data-tags="webdev">
+        <div class="post-tag"><span class="chip chip-purple">🌐 Web Dev</span></div>
+        <time class="post-date" datetime="2024-10-10">October 10, 2024</time>
+        <h2 class="post-title">CSS Grid vs Flexbox: When to Use Which (With Real Layouts)</h2>
+        <p class="post-excerpt">
+          Stop Googling this every project. A visual, practical breakdown of when to reach for Grid vs Flexbox,
+          with real layout examples you'll actually build in your next project — no fluff, just patterns.
+        </p>
+        <div class="post-footer">
+          <span class="read-time">⏱ 7 min read</span>
+          <a href="#" class="read-more" aria-label="Read CSS Grid vs Flexbox post (coming soon)">
+            Read Post
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Post 4 -->
+      <article class="glass-card blog-post-card" role="listitem" data-tags="security linux">
+        <div class="post-tag"><span class="chip chip-magenta">🔐 Security</span></div>
+        <time class="post-date" datetime="2024-09-20">September 20, 2024</time>
+        <h2 class="post-title">Setting Up a Personal Security Lab on Linux (For Free)</h2>
+        <p class="post-excerpt">
+          You don't need expensive tools or a beefy server to start practicing ethical hacking.
+          Here's how I set up my own cybersecurity lab on Linux using VMs, Kali, and free platforms like TryHackMe.
+        </p>
+        <div class="post-footer">
+          <span class="read-time">⏱ 12 min read</span>
+          <a href="#" class="read-more" aria-label="Read Security Lab setup post (coming soon)">
+            Read Post
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Post 5 -->
+      <article class="glass-card blog-post-card" role="listitem" data-tags="resources webdev">
+        <div class="post-tag"><span class="chip chip-cyan">📚 Resources</span></div>
+        <time class="post-date" datetime="2024-09-05">September 5, 2024</time>
+        <h2 class="post-title">The Ultimate Free Resource List for Arab CS Students (2024)</h2>
+        <p class="post-excerpt">
+          A curated, no-paywall list of the best courses, roadmaps, and communities for Arab Computer Science students —
+          in both English and Arabic. The list I wish existed when I started.
+        </p>
+        <div class="post-footer">
+          <span class="read-time">⏱ 6 min read</span>
+          <a href="#" class="read-more" aria-label="Read Free Resource List post (coming soon)">
+            Read Post
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- Post 6 -->
+      <article class="glass-card blog-post-card" role="listitem" data-tags="webdev resources">
+        <div class="post-tag"><span class="chip chip-purple">🌐 Web Dev</span></div>
+        <time class="post-date" datetime="2024-08-18">August 18, 2024</time>
+        <h2 class="post-title">Why I'm Building Open-Source Tools Instead of a Normal Portfolio</h2>
+        <p class="post-excerpt">
+          Most CS students build todo apps. I decided to build tools my community actually needs.
+          Here's the story behind TunDev, SecureDevHub, and YourLinuxGuide — and why open source is the best portfolio.
+        </p>
+        <div class="post-footer">
+          <span class="read-time">⏱ 9 min read</span>
+          <a href="#" class="read-more" aria-label="Read Open Source Portfolio post (coming soon)">
+            Read Post
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- No results message -->
+    <div class="no-results" id="no-results" aria-live="polite" role="status">
+      <p>No posts found for this filter. Check back soon! 🚀</p>
+    </div>
+  </main>
+
+  <!-- ============================================================
+       NEWSLETTER / CTA SECTION
+       ============================================================ -->
+  <section style="max-width:1280px;margin:0 auto;padding:40px 1.5rem 80px;">
+    <div class="glass-card" style="padding:2.5rem;text-align:center;position:relative;overflow:hidden;">
+      <!-- Decorative line -->
+      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--neon-cyan),var(--neon-purple),var(--neon-magenta));border-radius:var(--radius-lg) var(--radius-lg) 0 0;"></div>
+
+      <div class="section-label" style="justify-content:center;margin-bottom:1rem;" aria-hidden="true">// Stay Connected</div>
+
+      <h2 style="font-family:var(--font-head);font-size:clamp(1.3rem,3vw,2rem);font-weight:800;color:var(--text);margin-bottom:0.75rem;">
+        More posts coming <span style="color:var(--neon-cyan);text-shadow:var(--glow-cyan);">soon</span>
+      </h2>
+      <p style="font-size:0.9rem;color:var(--muted);max-width:460px;margin:0 auto 1.75rem;line-height:1.65;">
+        I write about Linux, web dev, security, and open-source building blocks for Arab CS students.
+        Follow me on GitHub to stay updated.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;">
+        <a href="https://github.com/ArsalainGh" class="btn btn-cyan" target="_blank" rel="noopener noreferrer" aria-label="Follow on GitHub">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          Follow on GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/arsalain-gharsallaoui" class="btn btn-purple" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="index.html" class="btn btn-magenta" aria-label="Back to portfolio">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Portfolio
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer id="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" aria-label="Go to portfolio">&lt;<span>AG</span>/&gt;</a>
+          <p>
+            Final-year CS student at ISIGK, Kairouan, Tunisia. Building open-source tools
+            for the Arab developer community. Passionate about web, Linux, and security.
+          </p>
+          <div class="footer-social" style="margin-top:1rem;" aria-label="Social media links">
+            <a href="https://github.com/ArsalainGh" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/arsalain-gharsallaoui" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://www.instagram.com/arsalain.gharsallaoui" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="mailto:arsalaing@gmail.com" class="social-btn" aria-label="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links" role="list">
+            <li><a href="index.html">Portfolio Home</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="index.html#about">About</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Topics</div>
+          <ul class="footer-links" role="list">
+            <li><a href="#" onclick="document.querySelector('[data-filter=linux]').click();return false;">🐧 Linux</a></li>
+            <li><a href="#" onclick="document.querySelector('[data-filter=security]').click();return false;">🔐 Security</a></li>
+            <li><a href="#" onclick="document.querySelector('[data-filter=webdev]').click();return false;">🌐 Web Dev</a></li>
+            <li><a href="#" onclick="document.querySelector('[data-filter=resources]').click();return false;">📚 Resources</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; 2026 <span>Arsalain Gharsallaoui</span>. Built with vanilla HTML, CSS & JS.
+          Kairouan, Tunisia.
+        </p>
+        <p class="footer-copy" style="color:var(--muted);">
+          ISIGK // Final-Year CS Student // GMT+1
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- end .page-wrapper -->
+
+<!-- Scroll to top -->
+<button class="scroll-top" id="scroll-top" aria-label="Scroll to top" title="Back to top">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script src="script.js"></script>
+<script>
+// Enhanced filter for blog page with no-results handling
+document.addEventListener('DOMContentLoaded', () => {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const posts = document.querySelectorAll('.blog-post-card');
+  const noResults = document.getElementById('no-results');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
+
+      const filter = btn.getAttribute('data-filter');
+      let visibleCount = 0;
+
+      posts.forEach(post => {
+        const tags = post.getAttribute('data-tags') || '';
+        const show = filter === 'all' || tags.includes(filter);
+
+        if (show) {
+          post.style.display = '';
+          post.style.opacity = '0';
+          post.style.transform = 'translateY(14px)';
+          requestAnimationFrame(() => {
+            setTimeout(() => {
+              post.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
+              post.style.opacity = '1';
+              post.style.transform = 'translateY(0)';
+            }, 20);
+          });
+          visibleCount++;
+        } else {
+          post.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+          post.style.opacity = '0';
+          post.style.transform = 'translateY(10px)';
+          setTimeout(() => { post.style.display = 'none'; }, 260);
+        }
+      });
+
+      setTimeout(() => {
+        if (noResults) {
+          noResults.classList.toggle('show', visibleCount === 0);
+        }
+      }, 300);
+    });
+  });
+});
+</script>
+</body>
+</html>

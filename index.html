@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Arsalain Gharsallaoui — Final-year Computer Science student at ISIGK, Kairouan, Tunisia. Building web projects & learning cybersecurity and Linux." />
+  <meta name="keywords" content="Arsalain Gharsallaoui, Computer Science, ISIGK, Kairouan, Tunisia, web development, cybersecurity, Linux, portfolio" />
+  <meta name="author" content="Arsalain Gharsallaoui" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Arsalain Gharsallaoui — CS Student Portfolio" />
+  <meta property="og:description" content="Final-year Computer Science student at ISIGK, Kairouan, Tunisia. Building web projects & learning cybersecurity and Linux." />
+  <meta property="og:url" content="https://arsalaing.github.io/" />
+  <meta property="og:site_name" content="Arsalain.dev" />
+  <meta property="og:image" content="assets/avatar.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Arsalain Gharsallaoui — CS Student Portfolio" />
+  <meta name="twitter:description" content="Final-year CS student at ISIGK. Web dev, Linux & Security enthusiast." />
+
+  <title>Arsalain Gharsallaoui — CS Student Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <!--
+    Optional: Create assets/favicon.svg with this content:
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <rect width="32" height="32" rx="6" fill="#070812"/>
+      <text x="50%" y="54%" font-family="monospace" font-weight="bold"
+            font-size="18" fill="#00F5FF" text-anchor="middle" dominant-baseline="middle">AG</text>
+    </svg>
+  -->
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     BACKGROUND LAYERS
+     ============================================================ -->
+<div class="bg-layer" aria-hidden="true"></div>
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="particles" aria-hidden="true"></div>
+<div class="cursor-glow" aria-hidden="true"></div>
+
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<header class="navbar" role="banner">
+  <div class="navbar-inner">
+    <a href="#home" class="nav-logo" aria-label="Go to home">
+      &lt;<span>AG</span>/&gt;
+    </a>
+
+    <nav aria-label="Main navigation">
+      <ul class="nav-links" role="list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-right">
+      <button class="theme-toggle" aria-label="Toggle theme" title="Toggle light/dark mode">
+        <span class="icon" aria-hidden="true">☀</span>
+        <span class="label">LIGHT</span>
+      </button>
+      <button class="burger" id="burger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation" aria-hidden="true">
+  <a href="#home">Home</a>
+  <a href="#education">Education</a>
+  <a href="#certifications">Certifications</a>
+  <a href="#projects">Projects</a>
+  <a href="#blog">Blog</a>
+  <a href="#about">About</a>
+</nav>
+
+<!-- ============================================================
+     PAGE WRAPPER
+     ============================================================ -->
+<div class="page-wrapper">
+
+  <!-- ============================================================
+       HERO / HOME
+       ============================================================ -->
+  <section id="home" aria-label="Hero">
+    <div class="hero-inner">
+      <!-- Left: Content -->
+      <div class="hero-content">
+        <div class="hero-badge" aria-label="Availability status">
+          <span class="dot" aria-hidden="true"></span>
+          Available for Internship
+        </div>
+
+        <h1 class="hero-title">
+          <span class="name">Arsalain Gharsallaoui</span>
+          <span class="sub">// Final-Year Computer Science Student</span>
+        </h1>
+
+        <p class="hero-tagline">
+          Building <strong>web projects</strong> from scratch &amp; diving deep into
+          <strong>Linux</strong> and <strong>cybersecurity</strong>. Based in
+          <strong>Kairouan, Tunisia</strong> — crafting open-source tools for the Arab dev community.
+          <br />
+          <span style="display:inline-block;margin-top:0.4rem;color:var(--neon-cyan);font-family:var(--font-head);font-size:0.85rem;">
+            &gt; <span id="typed-role" aria-live="polite">Web Developer</span><span style="animation:blink 1s step-end infinite;color:var(--neon-cyan)">_</span>
+          </span>
+        </p>
+
+        <!-- Skills HUD chips -->
+        <div class="hero-skills" role="list" aria-label="Skills">
+          <span class="chip chip-cyan" role="listitem">HTML</span>
+          <span class="chip chip-cyan" role="listitem">CSS</span>
+          <span class="chip chip-cyan" role="listitem">JavaScript</span>
+          <span class="chip chip-purple" role="listitem">Bootstrap</span>
+          <span class="chip chip-magenta" role="listitem">React</span>
+          <span class="chip chip-magenta" role="listitem">TypeScript</span>
+          <span class="chip chip-green" role="listitem">Linux</span>
+          <span class="chip chip-yellow" role="listitem">Security</span>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="hero-cta">
+          <a href="mailto:arsalaing@gmail.com" class="btn btn-cyan" aria-label="Send email to Arsalain">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Email Me
+          </a>
+          <a href="https://github.com/ArsalainGh" class="btn btn-purple" target="_blank" rel="noopener noreferrer" aria-label="Visit Arsalain's GitHub profile">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/arsalain-gharsallaoui" class="btn btn-magenta" target="_blank" rel="noopener noreferrer" aria-label="Visit Arsalain's LinkedIn profile">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+        </div>
+
+        <!-- Status Panel -->
+        <div class="status-panel" aria-label="Status information">
+          <div class="status-item">
+            <span class="icon" aria-hidden="true">📍</span>
+            Kairouan, Tunisia
+          </div>
+          <div class="status-item">
+            <span class="icon" aria-hidden="true">🕐</span>
+            GMT+1 (CET)
+          </div>
+          <div class="status-item">
+            <span class="icon" aria-hidden="true">🎓</span>
+            ISIGK, Final Year
+          </div>
+          <div class="status-item">
+            <span class="icon" aria-hidden="true">💼</span>
+            Open to Opportunities
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Avatar -->
+      <div class="hero-avatar-wrap" aria-label="Profile photo">
+        <div class="hero-avatar-glow" aria-hidden="true"></div>
+        <div class="hero-avatar-ring" aria-hidden="true"></div>
+        <div class="hero-avatar">
+          <img
+            src="assets/avatar.jpg"
+            alt="Arsalain Gharsallaoui avatar"
+            loading="lazy"
+            width="260"
+            height="260"
+          />
+          <div class="avatar-fallback" aria-hidden="true" style="display:none;">AG</div>
+        </div>
+        <div class="hero-corner tl" aria-hidden="true"></div>
+        <div class="hero-corner br" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="neon-divider" role="separator" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       EDUCATION
+       ============================================================ -->
+  <section id="education" aria-label="Education">
+    <div class="section-label" aria-hidden="true">01 // Education</div>
+    <h2 class="section-title">My <span>Academic</span> Journey</h2>
+
+    <div class="timeline" role="list" aria-label="Education timeline">
+
+      <!-- Entry 1 -->
+      <div class="timeline-item" role="listitem">
+        <div class="timeline-dot" aria-hidden="true"></div>
+        <article class="glass-card timeline-card">
+          <time class="timeline-date" datetime="2024">2024 — PRESENT</time>
+          <h3 class="timeline-title">Bachelor's in Computer Science</h3>
+          <p class="timeline-subtitle">ISIGK — Institut Supérieur d'Informatique et de Gestion de Kairouan</p>
+          <p class="timeline-desc">
+            Final-year student specializing in software engineering, web development, and information systems.
+            Currently working on capstone project focused on open-source educational platforms for Tunisian IT students.
+            Core modules include: Algorithms &amp; Data Structures, Web Technologies, Databases, Networks, Operating Systems, and Software Engineering.
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.85rem;">
+            <span class="chip chip-cyan">Computer Science</span>
+            <span class="chip chip-purple">Software Engineering</span>
+            <span class="chip chip-green">Kairouan, Tunisia</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- Entry 2 -->
+      <!--<div class="timeline-item" role="listitem">
+        <div class="timeline-dot" aria-hidden="true"></div>
+        <article class="glass-card timeline-card">
+          <time class="timeline-date" datetime="2019">2018 — 2022</time>
+          <h3 class="timeline-title">Baccalaureate in Computer Science</h3>
+          <p class="timeline-subtitle">Lycée Secondaire — Kairouan, Tunisia</p>
+          <p class="timeline-desc">
+            Completed secondary education with a specialization in Computer Science and Mathematics.
+            Gained foundational knowledge in programming logic, mathematics, and digital systems.
+            Graduated with honors, which paved the way for higher education in technology.
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.85rem;">
+            <span class="chip chip-magenta">Mathematics</span>
+            <span class="chip chip-cyan">Programming Basics</span>
+            <span class="chip chip-green">Honors</span>
+          </div>
+        </article>
+      </div>-->
+
+      <!-- Entry 3: placeholder -->
+      <!--<div class="timeline-item" role="listitem">
+        <div class="timeline-dot" aria-hidden="true"></div>
+        <article class="glass-card timeline-card">
+          <time class="timeline-date" datetime="2024">2024 — UPCOMING</time>
+          <h3 class="timeline-title">Master's Degree (Planned)</h3>
+          <p class="timeline-subtitle">TBD — Cybersecurity or Distributed Systems</p>
+          <p class="timeline-desc">
+            Planning to pursue graduate studies in cybersecurity, ethical hacking, or distributed systems.
+            Actively researching programs in Tunisia and abroad. Open to scholarships and exchange programs.
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.85rem;">
+            <span class="chip chip-yellow">Planned</span>
+            <span class="chip chip-magenta">Cybersecurity</span>
+            <span class="chip chip-purple">Research</span>
+          </div>
+        </article>
+      </div>-->
+
+    </div>
+  </section>
+
+  <div class="neon-divider" role="separator" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       CERTIFICATIONS
+       ============================================================ -->
+  <section id="certifications" aria-label="Certifications">
+    <div class="section-label" aria-hidden="true">02 // Certifications</div>
+    <h2 class="section-title">Certified <span>Skills</span></h2>
+
+    <div class="certs-grid" role="list" aria-label="Certifications list">
+
+      <!-- Cert 1 -->
+      <article class="glass-card cert-card" role="listitem">
+        <div class="cert-icon" aria-hidden="true">🌐</div>
+        <h3 class="cert-title">Responsive Web Design</h3>
+        <p class="cert-issuer">freeCodeCamp</p>
+        <p class="cert-date">2023</p>
+        <a href="#" class="cert-link" target="_blank" rel="noopener noreferrer" aria-label="View Responsive Web Design certificate">
+          View Credential
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </article>
+
+      <!-- Cert 2 -->
+      <article class="glass-card cert-card" role="listitem">
+        <div class="cert-icon" aria-hidden="true">🔐</div>
+        <h3 class="cert-title">Introduction to Cybersecurity</h3>
+        <p class="cert-issuer">Cisco Networking Academy</p>
+        <p class="cert-date">2023</p>
+        <a href="#" class="cert-link" target="_blank" rel="noopener noreferrer" aria-label="View Cybersecurity certificate">
+          View Credential
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </article>
+
+      <!-- Cert 3 -->
+      <article class="glass-card cert-card" role="listitem">
+        <div class="cert-icon" aria-hidden="true">⚛️</div>
+        <h3 class="cert-title">JavaScript Algorithms &amp; Data Structures</h3>
+        <p class="cert-issuer">freeCodeCamp</p>
+        <p class="cert-date">2024</p>
+        <a href="#" class="cert-link" target="_blank" rel="noopener noreferrer" aria-label="View JavaScript certificate">
+          View Credential
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="neon-divider" role="separator" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       PROJECTS
+       ============================================================ -->
+  <section id="projects" aria-label="Projects">
+    <div class="section-label" aria-hidden="true">03 // Projects</div>
+    <h2 class="section-title">Featured <span>Projects</span></h2>
+
+    <div class="projects-grid" role="list" aria-label="Project portfolio">
+
+      <!-- Project 1: TunDev -->
+      <article class="glass-card project-card" role="listitem">
+        <div class="project-img">
+          <img
+            src="assets/tundev.png"
+            alt="TunDev project screenshot"
+            loading="lazy"
+            width="600"
+            height="338"
+          />
+          <div class="project-img-placeholder" aria-hidden="true" style="display:none;">
+            <span class="img-icon">🖥️</span>
+            <span>TunDev Preview</span>
+          </div>
+          <div class="project-img-overlay" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(0,245,255,0.8)" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-num" aria-hidden="true">// PROJECT_01</div>
+          <h3 class="project-title">TunDev (demo)</h3>
+          <p class="project-desc">
+            The free, community-driven library of courses, tools, roadmaps and real-world advice —
+            curated specifically for Tunisian IT students. No paywalls. No fluff. Just your next step.
+          </p>
+          <div class="project-tags" aria-label="Technologies used">
+            <span class="chip chip-cyan">HTML</span>
+            <span class="chip chip-cyan">CSS</span>
+            <span class="chip chip-yellow">JavaScript</span>
+            <span class="chip chip-purple">Bootstrap</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/ArsalainGh/TunDev2.0" class="btn btn-cyan" target="_blank" rel="noopener noreferrer" aria-label="View TunDev on GitHub">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a href="https://arsalaingh.github.io/TunDev2.0/" class="btn btn-purple" target="_blank" rel="noopener noreferrer" aria-label="View TunDev live demo">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2: SecureDevHub -->
+      <article class="glass-card project-card" role="listitem">
+        <div class="project-img">
+          <img
+            src="assets/securedev.png"
+            alt="SecureDevHub project screenshot"
+            loading="lazy"
+            width="600"
+            height="338"
+          />
+          <div class="project-img-placeholder" aria-hidden="true" style="display:none;">
+            <span class="img-icon">🔐</span>
+            <span>SecureDevHub Preview</span>
+          </div>
+          <div class="project-img-overlay" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(255,43,214,0.8)" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-num" style="color:var(--neon-magenta);text-shadow:var(--glow-magenta);" aria-hidden="true">// PROJECT_02</div>
+          <h3 class="project-title">SecureDevHub</h3>
+          <p class="project-desc">
+            A free, open-source security guide for web developers. Learn the vulnerabilities that take sites down,
+            fix them with real code, and never ship insecure code again.
+          </p>
+          <div class="project-tags" aria-label="Technologies used">
+            <span class="chip chip-purple">Bootstrap</span>
+            <span class="chip chip-cyan">HTML</span>
+            <span class="chip chip-cyan">CSS</span>
+            <span class="chip chip-yellow">JavaScript</span>
+            <span class="chip chip-magenta">TypeScript</span>
+            <span class="chip chip-magenta">React 19</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/ArsalainGh/SecureDevHub" class="btn btn-cyan" target="_blank" rel="noopener noreferrer" aria-label="View SecureDevHub on GitHub">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a href="https://arsalaingh.github.io/SecureDevHub/" class="btn btn-magenta" target="_blank" rel="noopener noreferrer" aria-label="View SecureDevHub live demo">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3: YourLinuxGuide -->
+      <article class="glass-card project-card" role="listitem">
+        <div class="project-img">
+          <img
+            src="assets/project3.png"
+            alt="YourLinuxGuide project screenshot"
+            loading="lazy"
+            width="600"
+            height="338"
+          />
+          <div class="project-img-placeholder" aria-hidden="true" style="display:none;">
+            <span class="img-icon">🐧</span>
+            <span>YourLinuxGuide Preview</span>
+          </div>
+          <div class="project-img-overlay" aria-hidden="true">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(124,255,107,0.8)" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-num" style="color:var(--neon-green);text-shadow:var(--glow-green);" aria-hidden="true">// PROJECT_03</div>
+          <h3 class="project-title">YourLinuxGuide</h3>
+          <p class="project-desc">
+            A friendly, jargon-free guide to the world's most powerful operating system. Ten short topics
+            take you from "what even is Linux?" to installing it yourself.
+          </p>
+          <div class="project-tags" aria-label="Technologies used">
+            <span class="chip chip-cyan">HTML</span>
+            <span class="chip chip-cyan">CSS</span>
+            <span class="chip chip-yellow">JavaScript</span>
+            <span class="chip chip-purple">Bootstrap</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/ArsalainGh/How_To_Linux" class="btn btn-cyan" target="_blank" rel="noopener noreferrer" aria-label="View YourLinuxGuide on GitHub">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a href="https://arsalaingh.github.io/How_To_Linux/" class="btn btn-green" target="_blank" rel="noopener noreferrer" aria-label="View YourLinuxGuide live demo" style="color:var(--neon-green);border-color:var(--neon-green);">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="neon-divider" role="separator" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       BLOG & RESOURCES PREVIEW
+       ============================================================ -->
+  <section id="blog" aria-label="Blog and Resources">
+    <div class="section-label" aria-hidden="true">04 // Blog & Resources</div>
+    <h2 class="section-title">Latest <span>Posts</span></h2>
+
+    <div class="blog-grid" role="list" aria-label="Recent blog posts">
+
+      <!-- Post 1 -->
+      <article class="glass-card blog-card" role="listitem">
+        <div class="blog-card-tag"><span class="chip chip-cyan">Linux</span></div>
+        <time class="blog-card-date" datetime="2024-11-15">Nov 15, 2024</time>
+        <h3 class="blog-card-title">Getting Started with Linux: A Student's Survival Guide</h3>
+        <p class="blog-card-excerpt">Everything I wish I knew before switching to Linux as a CS student. From the terminal to package managers — let's make it painless.</p>
+        <a href="blog.html" class="blog-card-link" aria-label="Read Linux survival guide post">
+          Read More
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+
+      <!-- Post 2 -->
+      <article class="glass-card blog-card" role="listitem">
+        <div class="blog-card-tag"><span class="chip chip-magenta">Security</span></div>
+        <time class="blog-card-date" datetime="2024-10-28">Oct 28, 2024</time>
+        <h3 class="blog-card-title">XSS Attacks Explained: Why Your Web App Is Probably Vulnerable</h3>
+        <p class="blog-card-excerpt">Cross-site scripting is one of the most common web vulnerabilities. Here's how it works, and how to fix it with real code examples.</p>
+        <a href="blog.html" class="blog-card-link" aria-label="Read XSS attacks post">
+          Read More
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+
+      <!-- Post 3 -->
+      <article class="glass-card blog-card" role="listitem">
+        <div class="blog-card-tag"><span class="chip chip-purple">Web Dev</span></div>
+        <time class="blog-card-date" datetime="2024-10-10">Oct 10, 2024</time>
+        <h3 class="blog-card-title">CSS Grid vs Flexbox: When to Use Which (With Real Layouts)</h3>
+        <p class="blog-card-excerpt">Stop Googling this every project. A visual, practical breakdown of when to reach for Grid vs Flexbox — with layouts you'll actually build.</p>
+        <a href="blog.html" class="blog-card-link" aria-label="Read CSS Grid vs Flexbox post">
+          Read More
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+
+    </div>
+
+    <div class="blog-cta">
+      <a href="blog.html" class="btn btn-solid-cyan" aria-label="View all blog posts">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        Enter The Blog
+      </a>
+    </div>
+  </section>
+
+  <div class="neon-divider" role="separator" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       ABOUT ME
+       ============================================================ -->
+  <section id="about" aria-label="About Me">
+    <div class="section-label" aria-hidden="true">05 // About Me</div>
+    <h2 class="section-title">Who <span>I Am</span></h2>
+
+    <div class="about-inner">
+      <div class="about-text">
+        <div class="glass-card" style="padding:2rem;">
+          <p>
+            Hey! I'm <strong>Arsalain Gharsallaoui</strong>, a final-year Computer Science student at
+            <strong>ISIGK (Institut Supérieur d'Informatique et de Gestion de Kairouan)</strong>, Tunisia.
+            I'm passionate about building things for the web — from landing pages to full-stack applications —
+            and I care deeply about open-source software.
+          </p>
+          <p>
+            My journey into tech started with curiosity about <strong>how websites work</strong>, which quickly
+            spiraled into web development, and then into a fascination with <strong>Linux</strong> and
+            <strong>cybersecurity</strong>. I believe secure, accessible software should be the norm, not the exception.
+          </p>
+          <p>
+            I built projects like <strong>TunDev</strong> and <strong>SecureDevHub</strong> because I noticed
+            a gap: Tunisian and Arab IT students lack free, localized, quality resources. I want to help
+            close that gap — one project at a time.
+          </p>
+          <p>
+            When I'm not coding, you'll find me reading about <strong>ethical hacking</strong>, tinkering with
+            Linux distros, or exploring the latest in web technologies.
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:1.25rem;">
+            <a href="mailto:arsalaing@gmail.com" class="btn btn-cyan" style="font-size:0.62rem;padding:0.55rem 1rem;" aria-label="Email Arsalain">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              Email
+            </a>
+            <a href="https://github.com/ArsalainGh" class="btn btn-purple" style="font-size:0.62rem;padding:0.55rem 1rem;" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/arsalain-gharsallaoui" class="btn btn-magenta" style="font-size:0.62rem;padding:0.55rem 1rem;" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://www.instagram.com/arsalain.gharsallaoui" class="btn" style="color:var(--neon-yellow);border-color:var(--neon-yellow);border:1.5px solid;font-size:0.62rem;padding:0.55rem 1rem;font-family:var(--font-head);letter-spacing:0.1em;text-transform:uppercase;font-weight:700;border-radius:8px;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;transition:all var(--transition);" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="about-stats" role="list" aria-label="Portfolio statistics">
+        <article class="glass-card stat-card" role="listitem">
+          <span class="stat-num" aria-label="3 projects">3</span>
+          <span class="stat-label">Projects Built</span>
+        </article>
+        <article class="glass-card stat-card" role="listitem">
+          <span class="stat-num" aria-label="3 certifications">3</span>
+          <span class="stat-label">Certifications</span>
+        </article>
+        <article class="glass-card stat-card" role="listitem">
+          <span class="stat-num" aria-label="Final year">4th</span>
+          <span class="stat-label">Year of Studies</span>
+        </article>
+        <article class="glass-card stat-card" role="listitem">
+          <span class="stat-num" aria-label="8 skills">8+</span>
+          <span class="stat-label">Tech Skills</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer id="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo" aria-label="Back to top">&lt;<span>AG</span>/&gt;</a>
+          <p>
+            Final-year CS student at ISIGK, Kairouan, Tunisia. Building open-source tools
+            for the Arab developer community. Passionate about web, Linux, and security.
+          </p>
+          <div class="footer-social" style="margin-top:1rem;" aria-label="Social media links">
+            <a href="https://github.com/ArsalainGh" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/arsalain-gharsallaoui" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://www.instagram.com/arsalain.gharsallaoui" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="mailto:arsalaing@gmail.com" class="social-btn" aria-label="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links" role="list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Projects</div>
+          <ul class="footer-links" role="list">
+            <li><a href="https://arsalaingh.github.io/TunDev2.0/">TunDev</a></li>
+            <li><a href="https://arsalaingh.github.io/SecureDevHub/">SecureDevHub</a></li>
+            <li><a href="https://arsalaingh.github.io/How_To_Linux/">YourLinuxGuide</a></li>
+          </ul>
+          <div class="footer-col-title" style="margin-top:1.5rem;">Contact</div>
+          <ul class="footer-links" role="list">
+            <li><a href="mailto:arsalaing@gmail.com">arsalaing@gmail.com</a></li>
+            <li><a href="blog.html">Blog & Resources</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; 2026 <span>Arsalain Gharsallaoui</span>. Built with vanilla HTML, CSS & JS.
+          Kairouan, Tunisia.
+        </p>
+        <p class="footer-copy" style="color:var(--muted);">
+          ISIGK // Final-Year CS Student // GMT+1
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</div><!-- end .page-wrapper -->
+
+<!-- Scroll to top -->
+<button class="scroll-top" id="scroll-top" aria-label="Scroll to top" title="Back to top">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<style>
+@keyframes blink {
+  0%,100% { opacity: 1; }
+  50%      { opacity: 0; }
+}
+.btn-green {
+  background: transparent;
+  transition: all var(--transition);
+}
+.btn-green:hover, .btn-green:focus-visible {
+  background: rgba(124,255,107,0.12);
+  box-shadow: var(--glow-green);
+  transform: translateY(-2px);
+  outline: none;
+}
+</style>
+
+<script src="script.js"></script>
+</body>
+</html>
